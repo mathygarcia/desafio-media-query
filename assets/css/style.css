@@ -35,6 +35,10 @@ body {
     /* padding: 0%; */
 }
 
+.container-fluid {
+    background-color: #5472d3;
+}
+
 .container-fluid .navbar-brand {
     display: flex;
     /* justify-content: center; */
@@ -57,7 +61,8 @@ body {
     padding: 0%;
 }
 
-.navbar {
+.nav .navbar {
+    background-color: #297dc7;
     width: 100%;
 }
 
@@ -65,7 +70,7 @@ body {
 /*-------------------- section select */
 .select {
     grid-area: select;
-    background: #e0e0e0;
+    background-color: #6ab7ff;
     color: white;
     /* height: 15vh; */
     /* padding: 10px; */
@@ -94,7 +99,7 @@ body {
 /*-------------------- section main */
 .main {
     grid-area: main;
-    background: #f5f5f5;
+    background-color: #1e88e5;
     color: white;
     width: 100%;
     /* height: 100vh; */
@@ -150,12 +155,19 @@ body {
 
 .card .btn {
     margin: 1rem 0rem;
-    background-color: #0d8b50;
+    background-color: #64b5f6;
     width: 10rem;
     height: auto;
 }
 
+/*-------------------- section paginacion */
+.paginacion {
+    grid-area: pag;
+}
 
+.paginacion{
+    background-color:rgb(244, 244, 244);
+}
 /*-------------------- section footer */
 .footer {
     display: flex;
@@ -185,11 +197,13 @@ body {
     .container-grid {
         display: grid;
         border: 1px solid black;
-        grid-template-rows: 10% 12% auto 12%;
-        grid-template-areas: "nav nav nav"
-            "select select select"
-            "main main main"
-            "footer footer footer";
+        grid-template-rows: 8% 12% auto 6.5% 18%;
+        /* 10% 12% auto 12% */
+        grid-template-areas: "nav"
+            "select"
+            "main"
+            "pag"
+            "footer";
         height: 100vh;
     }
 }
@@ -214,12 +228,18 @@ body {
     .container-grid {
         display: grid;
         border: 1px solid black;
-        grid-template-rows: 10% 1fr 1fr 20%;
+        grid-template-rows: 10% auto 10%;
         grid-template-columns: 18% 82%;
-        grid-template-areas: "nav select select"
-            "nav main main"
-            "nav main main"
-            "footer main main";
+        grid-template-areas: "nav select"
+            "nav main"
+            "nav main"
+            "nav main"
+            "footer pag";
+        /* "cont-gene-menu cont-filtro"
+        "cont-gene-menu cont-gen-productos"
+        "cont-gene-menu cont-gen-productos"
+        "cont-gene-menu paginacion"
+        "cont-footer paginacion" */
         height: 100vh;
     }
 
@@ -283,7 +303,6 @@ body {
         display: grid;
         flex-wrap: wrap;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: rgb(219, 134, 134);
         column-gap: 5px;
         row-gap: 5px;
     }
@@ -292,20 +311,26 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         border: solid 1px rgb(129, 129, 129);
         width: 100%;
+        height: auto;
         text-align: justify;
         background-color: rgb(255, 255, 255);
     }
 
     .card h3 {
         color: #19282F;
-        padding-top: 1.5rem;
-        padding-bottom: 1rem;
+        /* padding-top: 1.5rem;
+        padding-bottom: 1rem; */
+        padding: 0%;
+        margin: 0%;
     }
 
     .card p {
         color: #013775;
+        margin: 0%;
+        padding: 0%;
     }
 
     .container-img {
@@ -323,12 +348,19 @@ body {
         /*  margin: 1rem 0rem; */
         margin: 0%;
         padding: 0%;
-        background-color: #0d8b50;
+        background-color: #64b5f6;
         width: 5em;
         height: auto;
     }
 
-
+    /*-------------------- section paginacion */
+    .paginacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
     /*-------------------- section footer */
 
 }
